@@ -41,10 +41,12 @@ export default function Home() {
           </span>
         </p>
 
-        {/* Button */}
-        <button className='bg-[#00539B] rounded-lg text-white text-base sm:text-lg md:text-xl px-5 sm:px-6 md:px-8 py-2 sm:py-3 font-medium mt-4 sm:mt-6 w-full max-w-xs sm:w-auto'>
-          Contact Us
-        </button>
+        {/* Button (centered but not full-width on mobile) */}
+        <div className='flex justify-center sm:justify-start w-full mt-4 sm:mt-6'>
+          <button className='bg-[#00539B] rounded-lg text-white text-base sm:text-lg md:text-xl px-5 sm:px-6 md:px-8 py-2 sm:py-3 font-medium'>
+            Contact Us
+          </button>
+        </div>
       </div>
 
       {/* Right Image Column */}
