@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex bg-[#D6E8EB] p-12 flex-col sm:flex-row gap-5 sm:gap-0  h-screen  items-start  pt-36 justify-start sm:justify-center ">
+    <div className="flex  p-12 flex-col sm:flex-row gap-5 sm:gap-0  h-screen  items-start  pt-36 justify-start sm:justify-center ">
       <div className="flex items-center z-50 justify-center gap-2 absolute top-8 left-12">
         <Image
           src="/logo.svg"
