@@ -1,12 +1,14 @@
+// Home.tsx or page.tsx
+import { Camera, Facebook, Twitter, Instagram } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex p-4 sm:p-8 md:p-12 flex-col sm:flex-row gap-4 sm:gap-0 min-h-screen items-start justify-start">
-      {/* Left Content Column */}
-      <div className="flex w-full sm:basis-2/4 flex-col gap-3  items-start justify-start h-full">
-        {/* Logo - Left aligned on all devices */}
-        <div className="flex items-center z-50 gap-2">
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-1 container mx-auto px-4 py-8 md:py-12 flex flex-col">
+        {/* Logo */}
+        <div className="flex items-center gap-4 mb-4 md:mb-6">
           <Image
             src="/logo.svg"
             alt="Next.js logo"
@@ -20,43 +22,65 @@ export default function Home() {
           </h1>
         </div>
 
-        {/* Main Heading - Left aligned on all devices */}
-        <h1 className="text-[48px] sm:text-[60px] md:text-[80px] lg:text-[100px] mt-8 sm:mt-4 leading-[0.9] font-bold text-neutral-700 -my-1 sm:-my-2">
-          Launching
-          <br />
-          Soon
-        </h1>
+        {/* Main content */}
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between md:gap-12 ">
+          <div className="max-w-xl">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none mb-8">
+              Launching
+              <br />
+              soon
+            </h1>
+            <p className="text-base  text-center md:text-left opacity-90 mb-10 max-w-md">
+              Tech doesn&apos;t have to feel like a different language. We built
+              GlobalConnect to make sure innovation works for you, your
+              business, and your people. We can&apos;t wait to innovate with
+              you!
+            </p>
+            <Link
+              href="#contact"
+              className="inline-block tracking-wider transition-colors bg-[#00539B] rounded-lg text-white text-sm sm:text-base md:text-lg px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 font-medium"
+            >
+              Contact Us
+            </Link>
 
-        {/* Paragraph - Left aligned on all devices */}
-        <p className="text-neutral-500 text-sm  md:text-base -space-y-1 mt-3 sm:mt-4 md:mt-6 w-7/12">
-          Tech doesn&apos;t have to feel like a different language. We built
-          GlobalConnect to make sure innovation works for you, your business,
-          and your people. We can&apos;t wait to innovate with you!
-        </p>
+            {/* Social icons */}
+            <div className="flex items-center gap-6 md:mt-16 mt-8">
+              <div className="flex items-center gap-2">
+                <Camera className="w-10 h-10" />
+                <span className="text-gray-500 font-medium text-sm">
+                  GET SOCIAL
+                </span>
+              </div>
+              <div className="w-10 h-10 flex items-center justify-center border border-black">
+                <span className="font-bold">文</span>
+              </div>
+              <Link href="#" aria-label="Facebook">
+                <Facebook className="w-6 h-6 text-black" />
+              </Link>
+              <Link href="#" aria-label="Twitter">
+                <Twitter className="w-6 h-6 text-black" />
+              </Link>
+              <Link href="#" aria-label="Instagram">
+                <Instagram className="w-6 h-6 text-black" />
+              </Link>
+            </div>
+          </div>
 
-        {/* Button - Centered on mobile, left aligned on desktop */}
-        <div className="flex justify-center sm:justify-start w-full mt-4 sm:mt-6">
-          <button className="bg-[#00539B] rounded-lg text-white text-sm sm:text-base md:text-lg px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 font-medium">
-            Contact Us
-          </button>
+          {/* Image with decorative elements */}
+          <div className="relative w-full max-w-md lg:max-w-xl aspect-square">
+            <div className="sm:basis-2/4 flex md:h-full mt-8 md:mt-0 items-center justify-center px-4 sm:px-0">
+              <Image
+                src="/new-group.png"
+                alt="GlobalConnect illustration"
+                width={800}
+                height={600}
+                priority
+                className="object-contain h-full"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Right Image Column */}
-      <div className="w-full sm:basis-2/4 flex items-center justify-center sm:justify-end mt-6 sm:mt-12 px-2 sm:px-0">
-        <Image
-          className="w-full max-w-xl"
-          src="/new-group.png"
-          alt="GlobalConnect illustration"
-          width={600}
-          height={400}
-          priority
-          style={{
-            objectFit: "contain",
-            height: "auto",
-          }}
-        />
-      </div>
+      </main>
     </div>
   );
 }

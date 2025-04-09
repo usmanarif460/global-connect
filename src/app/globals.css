@@ -122,6 +122,9 @@
 
 body{
   background-color: #D6E8EB;
+  margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 p,
