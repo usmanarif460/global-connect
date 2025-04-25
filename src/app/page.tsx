@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
       <main className="flex-1 mt-5 md:mt-0 container px-8 py-8 md:py-12 flex flex-col">
         {/* Logo */}
         <div className="flex items-center gap-4 mb-4 md:mb-6">
